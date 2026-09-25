@@ -7,87 +7,87 @@ document.addEventListener('DOMContentLoaded', function () {
         18: {
             nome: "Medicamentos",
             subcategorias: [
-                { nome: "Sujeitos a receita médica", imagem: "../style/img/med.jpg" },
-                { nome: "Não sujeitos a receita médica", imagem: "../style/img/med2.jpg" }
+                { nome: "Sujeitos a receita médica", imagem: "../style/img/medicamentos.jpg" },
+                { nome: "Não sujeitos a receita médica", imagem: "../style/img/medicametos.jpg" }
             ]
         },
         11: {
             nome: "Nutrição",
             subcategorias: [
-                { nome: "Alimentação por sonda e suporte nutricional", imagem: "../style/img/nut-sonda.jpg" },
-                { nome: "Alimentos biológicos e sem glúten", imagem: "../style/img/nut-bio.jpg" },
-                { nome: "Nutrição clínica e adaptada", imagem: "../style/img/nut-clinica.jpg" }
+                { nome: "Alimentação por sonda e suporte nutricional", imagem: "../style/img/sonda.jpg" },
+                { nome: "Alimentos biológicos e sem glúten", imagem: "../style/img/non-gluten.jpg" },
+                { nome: "Nutrição clínica e adaptada", imagem: "../style/img/clinical-nuctrition.jpg" }
             ]
         },
         17: {
             nome: "Saúde Animal",
             subcategorias: [
-                { nome: "Medicamentos e cuidados veterinários", imagem: "../style/img/ani-medicamentos.jpg" },
-                { nome: "Produtos de uso veterinário", imagem: "../style/img/ani-produtos.jpg" }
+                { nome: "Medicamentos e cuidados veterinários", imagem: "../style/img/veterinario.jpg" },
+                { nome: "Produtos de uso veterinário", imagem: "../style/img/produto-veterinario.jpg" }
             ]
         },
         6: {
             nome: "Bebé e Mamã",
             subcategorias: [
-                { nome: "Higiene e cuidados do bebé", imagem: "../style/img/beb-higiene.jpg" },
-                { nome: "Alimentação infantil", imagem: "../style/img/beb-alimentacao.jpg" },
-                { nome: "Acessórios e equipamentos do bebé", imagem: "../style/img/beb-acessorios.jpg" },
-                { nome: "Mamã e pré-mamã", imagem: "../style/img/beb-mama.jpg" }
+                { nome: "Higiene e cuidados do bebé", imagem: "../style/img/higiene.jpg" },
+                { nome: "Alimentação infantil", imagem: "../style/img/kids-food.jpg" },
+                { nome: "Acessórios e equipamentos do bebé", imagem: "../style/img/bebes-acess.jpg" },
+                { nome: "Mamã e pré-mamã", imagem: "../style/img/mama.jpg" }
             ]
         },
         4: {
             nome: "Beleza e Cuidados Pessoais",
             subcategorias: [
-                { nome: "Rosto", imagem: "../style/img/bel-rosto.jpg" },
-                { nome: "Corpo", imagem: "../style/img/bel-corpo.jpg" },
-                { nome: "Perfumes", imagem: "../style/img/bel-perfumes.jpg" },
-                { nome: "Cabelo", imagem: "../style/img/bel-cabelo.jpg" },
-                { nome: "Maquilhagem", imagem: "../style/img/bel-maquilhagem.jpg" },
-                { nome: "Acessórios de cosmética", imagem: "../style/img/bel-acessorios.jpg" },
-                { nome: "Cuidados para pés e mãos", imagem: "../style/img/bel-pesmaos.jpg" },
-                { nome: "Higiene e cuidado oral", imagem: "../style/img/bel-oral.jpg" },
-                { nome: "Cuidados olhos e ouvidos", imagem: "../style/img/bel-olhos.jpg" },
-                { nome: "K-Beauty", imagem: "../style/img/bel-kbeauty.jpg" }
+                { nome: "Rosto", imagem: "../style/img/rosto.jpg" },
+                { nome: "Corpo", imagem: "../style/img/corpo.jpg" },
+                { nome: "Perfumes", imagem: "../style/img/perfumes.jpg" },
+                { nome: "Cabelo", imagem: "../style/img/cabelo.jpg" },
+                { nome: "Maquilhagem", imagem: "../style/img/maquilhagem.jpg" },
+                { nome: "Acessórios de cosmética", imagem: "../style/img/acessorios.jpg" },
+                { nome: "Cuidados para pés e mãos", imagem: "../style/img/pesmaos.jpg" },
+                { nome: "Higiene e cuidado oral", imagem: "../style/img/bocal.jpg" },
+                { nome: "Cuidados olhos e ouvidos", imagem: "../style/img/olhos.jpg" },
+                { nome: "K-Beauty", imagem: "../style/img/k-beauty.jpg" }
             ]
         },
         5: {
             nome: "Protecção Solar",
             subcategorias: [
-                { nome: "Protetores solares", imagem: "../style/img/pro-protetores.jpg" },
-                { nome: "Pós-solar", imagem: "../style/img/pro-possolar.jpg" },
-                { nome: "Bronzeadores", imagem: "../style/img/pro-bronzeadores.jpg" },
-                { nome: "Autobronzeadores", imagem: "../style/img/pro-autobronzeadores.jpg" }
+                { nome: "Protetores solares", imagem: "../style/img/protetor-solar.jpg" },
+                { nome: "Pós-solar", imagem: "../style/img/pos-solares.jpg" },
+                { nome: "Bronzeadores", imagem: "../style/img/bronzeadores.jpg" }
             ]
         },
         16: {
             nome: "Primeiros Socorros",
             subcategorias: [
-                { nome: "Tratamento de feridas e lesões", imagem: "../style/img/pri-feridas.jpg" },
-                { nome: "Pensos, ligaduras e adesivos", imagem: "../style/img/pri-pensos.jpg" },
-                { nome: "Kits e acessórios de primeiros socorros", imagem: "../style/img/pri-kits.jpg" }
+                { nome: "Tratamento de feridas e lesões", imagem: "../style/img/feridas.jpg" },
+                { nome: "Pensos, ligaduras e adesivos", imagem: "../style/img/ligaduras.jpg" },
+                { nome: "Kits e acessórios de primeiros socorros", imagem: "../style/img/kit-socorros.jpg" }
             ]
         },
         8: {
             nome: "Dermatologia",
             subcategorias: [
-                { nome: "Infecções e parasitas da pele", imagem: "../style/img/dem-infeccoes.jpg" },
-                { nome: "Pele seca e sensível", imagem: "../style/img/dem-peleseca.jpg" },
-                { nome: "Fungos e infecções cutâneas", imagem: "../style/img/dem-fungos.jpg" },
-                { nome: "Repelentes e alívio da pele", imagem: "../style/img/dem-repelentes.jpg" }
+                { nome: "Infecções e parasitas da pele", imagem: "../style/img/parasita-pele.jpg" },
+                { nome: "Pele seca e sensível", imagem: "../style/img/pele-seca.jpg" },
+                { nome: "Fungos e infecções cutâneas", imagem: "../style/img/infeccoes-cutaneas.jpg" },
+                { nome: "Repelentes e alívio da pele", imagem: "../style/img/repelentes.jpg" }
             ]
         },
         10: {
             nome: "Contracepção e Sexualidade",
             subcategorias: [
-                { nome: "Métodos contraceptivos", imagem: "../style/img/conc-metodos.jpg" },
-                { nome: "Saúde e bem-estar sexual", imagem: "../style/img/conc-saude.jpg" },
-                { nome: "Testes de fertilidade e gravidez", imagem: "../style/img/conc-testes.jpg" }
+                { nome: "Métodos contraceptivos", imagem: "../style/img/contraceptivos.jpg" },
+                { nome: "Saúde e bem-estar sexual", imagem: "../style/img/saude-sexual.jpg" },
+                { nome: "Testes de fertilidade e gravidez", imagem: "../style/img/teste.jpg" }
             ]
         },
         13: {
             nome: "Desporto e Fitness",
             subcategorias: [
-                { nome: "Equipamento e vestuário desportivo", imagem: "../style/img/des-equipamento.jpg" }
+                { nome: "Equipamento e vestuário desportivo", imagem: "../style/img/fitness.jpg" },
+                { nome: "Suplementos", imagem: "../style/img/suplementos.jpg" }
             ]
         }
     };
