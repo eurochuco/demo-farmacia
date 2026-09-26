@@ -1,0 +1,451 @@
+/* ===== Header superior moderno com busca integrada, carrinho e links (categorias, marcas) ===== */
+
+.header {
+    margin: 0;
+    padding: 10px 30px;
+    background-color: #ffffff;
+    width: 100%;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* ===== Logo ===== */
+.header .logo {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.header .logo:hover {
+    transform: scale(1.05);
+}
+
+.header .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-nome {
+    font-size: 20px;
+    font-weight: 700;
+    color: #46c900;
+    white-space: nowrap;
+}
+
+/* ===== Menu de navegação ===== */
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 8px;
+}
+
+.menu li {
+    margin-left: 0;
+}
+
+.menu li a {
+    position: relative;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 4px;
+    height: 2px;
+    background-color: #46c900;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.menu li a:hover {
+    color: #2bbfa3;
+    background-color: rgba(43, 191, 163, 0.08);
+}
+
+.menu li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* ===== Barra de pesquisa ===== */
+.SearchBar {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: 1px solid #e6e6e6;
+    border-radius: 24px;
+    padding: 4px 4px 4px 16px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.SearchBar:focus-within {
+    background-color: #ffffff;
+    border-color: #46c900;
+    box-shadow: 0 0 0 3px rgba(43, 191, 163, 0.15);
+}
+
+.SearchBar form {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
+.SearchBar input {
+    width: 260px;
+    padding: 8px 4px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: #333;
+}
+
+.SearchBar input::placeholder {
+    color: #999;
+}
+
+.SearchBar button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: #46c900;
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.SearchBar button:hover {
+    background-color: #46c900;
+}
+
+.SearchBar button:active {
+    transform: scale(0.95);
+}
+
+/* ===== Ícone do carrinho (opcional, caso exista no HTML) ===== */
+.header .carrinho-icone {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.header .carrinho-icone:hover {
+    background-color: #ececec;
+}
+
+.header .carrinho-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background-color: #e2571c;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== Footer ===== */
+.footer {
+    width: 100%;
+    background-color: #25D366;
+    color: #ffffff;
+    padding: 60px 20px 30px;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.titulo-linha {
+    width: 20px;
+    height: 2px;
+    background-color: #f5a623;
+    display: inline-block;
+}
+
+.footer-link {
+    display: block;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 16px;
+    transition: opacity 0.2s ease;
+}
+
+.footer-link:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.footer-redes {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.rede-icone {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.rede-icone:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-conecte {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.whatsapp-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    padding: 14px 18px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    max-width: 230px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.whatsapp-btn svg {
+    color: #25D366;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 3px;
+    width: 26px;
+    height: 26px;
+    box-sizing: border-box;
+}
+
+.footer-divisor {
+    max-width: 1200px;
+    margin: 40px auto;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.footer-baixo {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer-logo-espaco {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.footer-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.footer-logo-texto {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 4px;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.footer-contactos {
+    text-align: right;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-contactos p {
+    margin: 0 0 6px;
+}
+
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header {
+        padding: 10px 16px;
+        flex-wrap: wrap;
+        height: auto;
+        gap: 8px;
+        row-gap: 10px;
+    }
+
+    .logo-container {
+        order: 1;
+    }
+
+    .menu {
+        order: 2;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .SearchBar {
+        order: 3;
+        width: 100%;
+    }
+
+    .SearchBar input {
+        width: 100%;
+    }
+
+    .header .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-nome {
+        font-size: 17px;
+    }
+
+    .menu li a {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-baixo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-contactos {
+        text-align: center;
+    }
+
+    .header {
+        padding: 10px 14px;
+    }
+
+    .logo-nome {
+        font-size: 16px;
+    }
+}
