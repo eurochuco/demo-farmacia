@@ -3,34 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos | Farmácia</title>
-    <link rel="stylesheet" href="../style/home.css">
+    <title id="pageTitle">Resultados da pesquisa | Farmácia</title>
+    <link rel="stylesheet" href="../style/header-footer.css">
     <link rel="stylesheet" href="../style/produtos.css">
-    <link rel="stylesheet" href="../style/header-footer.css">
-    <link rel="stylesheet" href="../style/header-footer.css">
 </head>
 <body>
-    <!--header superior moderno com busca integrada carrinhos e links(categorias, marcas)-->
 
     <div id="header-placeholder"></div>
 
-
-
-    <section class="pagina-produtos">
-        <div class="pagina-produtos-topo">
-            <a class="voltar-mini" href="index.html">← Início</a>
-            <h1 id="produtosTitulo">Catálogo de produtos</h1>
-            <p id="produtosDescricao">A carregar…</p>
-        </div>
-        <div class="produtos-grelha" id="produtosGrelha"></div>
+    <section class="produtos-topo">
+        <a href="index.html" class="voltar-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Voltar à página inicial
+        </a>
+        <h1 id="produtosTitulo">A pesquisar...</h1>
+        <p id="produtosSubtitulo"></p>
     </section>
 
-    <!-- Footer -->
+    <!-- Categorias que correspondem à pesquisa -->
+    <section class="resultado-secao" id="secaoCategorias" style="display:none;">
+        <h2>Categorias</h2>
+        <div class="resultado-categorias-grid" id="categoriasResultado"></div>
+    </section>
+
+    <!-- Marcas que correspondem à pesquisa -->
+    <section class="resultado-secao" id="secaoMarcas" style="display:none;">
+        <h2>Marcas</h2>
+        <div class="resultado-marcas-grid" id="marcasResultado"></div>
+    </section>
+
+    <!-- Produtos que correspondem à pesquisa -->
+    <section class="resultado-secao" id="secaoProdutos">
+        <h2>Produtos</h2>
+        <div class="produtos-grid" id="produtosResultado"></div>
+    </section>
+
+    <!-- Nada encontrado -->
+    <section class="sem-resultados" id="semResultados" style="display:none;">
+        <h2>Não encontrámos nada para essa pesquisa</h2>
+        <p>Tenta outro termo, ou navega pelas categorias.</p>
+        <a href="categorias.html" class="btn-voltar">Ver todas as categorias</a>
+    </section>
+
     <div id="footer-placeholder"></div>
 
-    <script src="../style/header-footer.js"></script>
-
     <script src="../style/catalogo.js"></script>
+    <script src="../style/header-footer.js"></script>
     <script src="../style/produtos.js"></script>
 </body>
 </html>
