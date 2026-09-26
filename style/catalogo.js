@@ -1,6 +1,10 @@
 /* Catálogo único do frontend — produtos, marcas e helpers de cartão */
+
+// Número de WhatsApp da farmácia, usado para gerar os links de "Adquirir produto"
 const WHATSAPP_NUMERO = "244947791628";
 
+// Objeto com todas as marcas do catálogo.
+// Cada chave (70, 71, 72...) é o ID da marca, usado no campo "marcaId" dos produtos.
 const MARCAS = {
   70: {
     id: 70,
@@ -76,6 +80,9 @@ const MARCAS = {
   }
 };
 
+// Objeto com as categorias principais do catálogo.
+// Cada chave (18, 11, 17...) é o ID da categoria, usado no campo "categoriaId" dos produtos
+// e no parâmetro "categoryId" do URL da página de listagem.
 const CATEGORIAS = {
   18: { nome: "Medicamentos", imagem: "../style/img/med.jpg" },
   11: { nome: "Nutrição", imagem: "../style/img/nut.jpg" },
@@ -89,6 +96,10 @@ const CATEGORIAS = {
   13: { nome: "Desporto e Fitness", imagem: "../style/img/des.jpg" }
 };
 
+// Array com todos os produtos do catálogo.
+// Cada produto tem: id, nome, detalhe, preco, desconto (true/false),
+// imagem, descricao, categoriaId (liga a CATEGORIAS), subcategoria (texto livre),
+// marcaId (liga a MARCAS, ou null) e promoIds (array de IDs de PROMOCOES).
 const PRODUTOS = [
   {
     id: 1,
@@ -96,7 +107,7 @@ const PRODUTOS = [
     detalhe: "Solução: (50 ml) x 1",
     preco: 19225.8,
     desconto: true,
-    imagem: "../style/img/patro1.jpg",
+    imagem: "../style/img/uriage.jpg",
     descricao: "Solução desodorizante suave para uso diário, formulada para peles sensíveis. Ajuda a neutralizar o odor sem irritar nem manchar a roupa.",
     categoriaId: 4,
     subcategoria: "Corpo",
@@ -109,7 +120,7 @@ const PRODUTOS = [
     detalhe: "Barra Proteica: (60g) x 12",
     preco: 47848.43,
     desconto: false,
-    imagem: "../style/img/patro2.jpg",
+    imagem: "../style/img/myprotein.jpg",
     descricao: "Caixa com 12 barras proteicas em camadas, sabor cookie crumble. Boa fonte de proteína para o pós-treino ou como lanche prático.",
     categoriaId: 13,
     subcategoria: "Equipamento e vestuário desportivo",
@@ -122,7 +133,7 @@ const PRODUTOS = [
     detalhe: "Fragrance Huit: (75ml) x 1",
     preco: 173316,
     desconto: false,
-    imagem: "../style/img/patro3.jpg",
+    imagem: "../style/img/fenty.jpg",
     descricao: "Fragrância unissexo com fixação prolongada, ideal para uso diário. Frasco de 75ml, edição Huit.",
     categoriaId: 4,
     subcategoria: "Perfumes",
@@ -135,7 +146,7 @@ const PRODUTOS = [
     detalhe: "KIT",
     preco: 122459,
     desconto: false,
-    imagem: "../style/img/patro4.jpg",
+    imagem: "../style/img/kit-medicube.jpg",
     descricao: "Kit de skincare coreano Medicube, pensado para uma rotina completa de cuidado facial.",
     categoriaId: 4,
     subcategoria: "K-Beauty",
@@ -148,7 +159,7 @@ const PRODUTOS = [
     detalhe: "Creme: (40 ml) x 1",
     preco: 36200,
     desconto: false,
-    imagem: "../style/img/marca2.jpg",
+    imagem: "../style/img/aderme-creme.jpg",
     descricao: "Creme reparador com proteção solar elevada, indicado para peles frágeis e sensibilizadas.",
     categoriaId: 8,
     subcategoria: "Pele seca e sensível",
@@ -161,7 +172,7 @@ const PRODUTOS = [
     detalhe: "Spray: (200ml) x 1",
     preco: 44523.84,
     desconto: false,
-    imagem: "../style/img/pro.jpg",
+    imagem: "../style/img/aderma-spray.jpg",
     descricao: "Spray solar de muito alta proteção, textura leve e resistente à água.",
     categoriaId: 5,
     subcategoria: "Protetores solares",
@@ -174,7 +185,7 @@ const PRODUTOS = [
     detalhe: "Spray: (300ml) x 1",
     preco: 18900,
     desconto: false,
-    imagem: "../style/img/marca1.jpg",
+    imagem: "../style/img/avene-spray.jpg",
     descricao: "Água termal calmante e antirritante para peles sensíveis, reativas ou após procedimentos.",
     categoriaId: 8,
     subcategoria: "Pele seca e sensível",
@@ -187,7 +198,7 @@ const PRODUTOS = [
     detalhe: "Creme: (40ml) x 1",
     preco: 25900,
     desconto: true,
-    imagem: "../style/img/dem.jpg",
+    imagem: "../style/img/avene-creme.jpg",
     descricao: "Creme reparador que ajuda a restaurar a barreira cutânea e a acalmar irritações.",
     categoriaId: 16,
     subcategoria: "Tratamento de feridas e lesões",
@@ -200,7 +211,7 @@ const PRODUTOS = [
     detalhe: "Gloss: (9ml) x 1",
     preco: 45900,
     desconto: false,
-    imagem: "../style/img/bel.jpg",
+    imagem: "../style/img/fenty-gloss.jpg",
     descricao: "Gloss hidratante com brilho intenso, para lábios mais cheios e confortáveis.",
     categoriaId: 4,
     subcategoria: "Maquilhagem",
@@ -213,7 +224,7 @@ const PRODUTOS = [
     detalhe: "Proteína: (1kg) x 1",
     preco: 89900,
     desconto: true,
-    imagem: "../style/img/des.jpg",
+    imagem: "../style/img/myprotein-impact.jpg",
     descricao: "Proteína de soro de leite para apoio à recuperação muscular e aos treinos diários.",
     categoriaId: 13,
     subcategoria: "Equipamento e vestuário desportivo",
@@ -226,7 +237,7 @@ const PRODUTOS = [
     detalhe: "Pads: (70un) x 1",
     preco: 38900,
     desconto: true,
-    imagem: "../style/img/marca5.jpg",
+    imagem: "../style/img/medicine-pore.jpg",
     descricao: "Discos esfoliantes para minimizar o aspeto dos poros e uniformizar a textura da pele.",
     categoriaId: 4,
     subcategoria: "K-Beauty",
@@ -239,7 +250,7 @@ const PRODUTOS = [
     detalhe: "Sérum: (50ml) x 1",
     preco: 34900,
     desconto: false,
-    imagem: "../style/img/marca6.jpg",
+    imagem: "../style/img/vichy-serum.jpg",
     descricao: "Sérum fortificante com ácido hialurónico e água vulcânica mineralizante.",
     categoriaId: 4,
     subcategoria: "Rosto",
@@ -252,7 +263,7 @@ const PRODUTOS = [
     detalhe: "Gel: (200ml) x 1",
     preco: 21900,
     desconto: true,
-    imagem: "../style/img/bel.jpg",
+    imagem: "../style/img/vichy-gel.jpg",
     descricao: "Gel de limpeza para peles oleosas e com tendência acneica, com efeito matificante.",
     categoriaId: 4,
     subcategoria: "Rosto",
@@ -265,7 +276,7 @@ const PRODUTOS = [
     detalhe: "Creme: (75ml) x 1",
     preco: 27900,
     desconto: false,
-    imagem: "../style/img/pri.jpg",
+    imagem: "../style/img/uriage-creme.jpg",
     descricao: "Creme isolante e reparador para zonas fragilizadas da pele.",
     categoriaId: 16,
     subcategoria: "Tratamento de feridas e lesões",
@@ -278,7 +289,7 @@ const PRODUTOS = [
     detalhe: "Fluido: (50ml) x 1",
     preco: 42900,
     desconto: false,
-    imagem: "../style/img/marca7.jpg",
+    imagem: "../style/img/la-anthelios.jpg",
     descricao: "Proteção solar facial de muito alta eficácia, textura invisível e não oleosa.",
     categoriaId: 5,
     subcategoria: "Protetores solares",
@@ -291,7 +302,7 @@ const PRODUTOS = [
     detalhe: "Creme: (40ml) x 1",
     preco: 33900,
     desconto: true,
-    imagem: "../style/img/dem.jpg",
+    imagem: "../style/img/la-effaclar.jpg",
     descricao: "Cuidado corretor para imperfeições, poros e marcas residuais.",
     categoriaId: 8,
     subcategoria: "Pele seca e sensível",
@@ -304,7 +315,7 @@ const PRODUTOS = [
     detalhe: "Creme: (340g) x 1",
     preco: 24900,
     desconto: false,
-    imagem: "../style/img/marca8.jpg",
+    imagem: "../style/img/cerave-creme.jpg",
     descricao: "Hidratação intensa com três ceramidas essenciais e ácido hialurónico.",
     categoriaId: 8,
     subcategoria: "Pele seca e sensível",
@@ -317,7 +328,7 @@ const PRODUTOS = [
     detalhe: "Gel: (236ml) x 1",
     preco: 19900,
     desconto: true,
-    imagem: "../style/img/bel.jpg",
+    imagem: "../style/img/cerave-gel.jpg",
     descricao: "Limpeza suave que remove impurezas sem comprometer a barreira da pele.",
     categoriaId: 4,
     subcategoria: "Rosto",
@@ -330,7 +341,7 @@ const PRODUTOS = [
     detalhe: "Comprimidos: (20) x 1",
     preco: 1850,
     desconto: false,
-    imagem: "../style/img/med.jpg",
+    imagem: "../style/img/paracetamol.jpg",
     descricao: "Analgésico e antipirético para dores ligeiras a moderadas e febre. Siga as indicações do folheto.",
     categoriaId: 18,
     subcategoria: "Não sujeitos a receita médica",
@@ -343,7 +354,7 @@ const PRODUTOS = [
     detalhe: "Cápsulas: (21) x 1",
     preco: 6200,
     desconto: false,
-    imagem: "../style/img/med.jpg",
+    imagem: "../style/img/amoxilina.jpg",
     descricao: "Antibiótico sujeito a receita médica. Apresente a receita no balcão ou envie-a pelo WhatsApp.",
     categoriaId: 18,
     subcategoria: "Sujeitos a receita médica",
@@ -356,7 +367,7 @@ const PRODUTOS = [
     detalhe: "Comprimidos: (60) x 1",
     preco: 8900,
     desconto: true,
-    imagem: "../style/img/nut.jpg",
+    imagem: "../style/img/vitamina-c.jpg",
     descricao: "Suplemento de vitamina C para apoio à imunidade e à energia do dia a dia.",
     categoriaId: 11,
     subcategoria: "Nutrição clínica e adaptada",
@@ -369,7 +380,7 @@ const PRODUTOS = [
     detalhe: "Cápsulas: (30) x 1",
     preco: 7600,
     desconto: true,
-    imagem: "../style/img/nut.jpg",
+    imagem: "../style/img/complexo-b.jpg",
     descricao: "Complexo de vitaminas do grupo B para metabolismo energético e vitalidade.",
     categoriaId: 11,
     subcategoria: "Nutrição clínica e adaptada",
@@ -382,7 +393,7 @@ const PRODUTOS = [
     detalhe: "Cápsulas: (60) x 1",
     preco: 12400,
     desconto: false,
-    imagem: "../style/img/nut.jpg",
+    imagem: "../style/img/omega-3.jpg",
     descricao: "Ácidos gordos essenciais EPA e DHA para o bem-estar cardiovascular.",
     categoriaId: 11,
     subcategoria: "Alimentos biológicos e sem glúten",
@@ -395,7 +406,7 @@ const PRODUTOS = [
     detalhe: "Cápsulas: (120) x 1",
     preco: 17800,
     desconto: true,
-    imagem: "../style/img/des.jpg",
+    imagem: "../style/img/magnesio-b6.jpg",
     descricao: "Três formas de magnésio com vitamina B6 para suporte ao sistema nervoso e à recuperação.",
     categoriaId: 11,
     subcategoria: "Nutrição clínica e adaptada",
@@ -408,7 +419,7 @@ const PRODUTOS = [
     detalhe: "Cápsulas: (30) x 1",
     preco: 15500,
     desconto: false,
-    imagem: "../style/img/nut.jpg",
+    imagem: "../style/img/digestivo-30.jpg",
     descricao: "Culturas probióticas para equilíbrio da flora intestinal.",
     categoriaId: 11,
     subcategoria: "Alimentação por sonda e suporte nutricional",
@@ -421,7 +432,7 @@ const PRODUTOS = [
     detalhe: "Lata: (400g) x 1",
     preco: 3200,
     desconto: false,
-    imagem: "../style/img/ani.jpg",
+    imagem: "../style/img/racao-humida.jpg",
     descricao: "Alimento completo húmido para cães adultos, com proteínas de qualidade.",
     categoriaId: 17,
     subcategoria: "Produtos de uso veterinário",
@@ -447,7 +458,7 @@ const PRODUTOS = [
     detalhe: "Pacote: (72) x 1",
     preco: 2100,
     desconto: false,
-    imagem: "../style/img/beb.jpg",
+    imagem: "../style/img/atiparasitario.jpg",
     descricao: "Toalhitas suaves sem álcool, adequadas à pele delicada do bebé.",
     categoriaId: 6,
     subcategoria: "Higiene e cuidados do bebé",
@@ -460,7 +471,7 @@ const PRODUTOS = [
     detalhe: "Lata: (800g) x 1",
     preco: 14500,
     desconto: false,
-    imagem: "../style/img/beb.jpg",
+    imagem: "../style/img/leite-transicao.jpg",
     descricao: "Fórmula de transição para o crescimento. Siga as instruções de preparação.",
     categoriaId: 6,
     subcategoria: "Alimentação infantil",
@@ -473,7 +484,7 @@ const PRODUTOS = [
     detalhe: "Creme: (200ml) x 1",
     preco: 9800,
     desconto: true,
-    imagem: "../style/img/beb.jpg",
+    imagem: "../style/img/creme-mama.jpg",
     descricao: "Hidratação intensa para a pele durante a gravidez e o pós-parto.",
     categoriaId: 6,
     subcategoria: "Mamã e pré-mamã",
@@ -486,7 +497,7 @@ const PRODUTOS = [
     detalhe: "Loção: (200ml) x 1",
     preco: 11200,
     desconto: true,
-    imagem: "../style/img/pro.jpg",
+    imagem: "../style/img/protetor-solar-corporal.jpg",
     descricao: "Proteção solar de amplo espectro para o corpo, resistente à água.",
     categoriaId: 5,
     subcategoria: "Protetores solares",
@@ -499,7 +510,7 @@ const PRODUTOS = [
     detalhe: "Loção: (150ml) x 1",
     preco: 6400,
     desconto: false,
-    imagem: "../style/img/pro.jpg",
+    imagem: "../style/img/pos-solar.jpg",
     descricao: "Acalma e hidrata a pele após a exposição solar.",
     categoriaId: 5,
     subcategoria: "Pós-solar",
@@ -512,7 +523,7 @@ const PRODUTOS = [
     detalhe: "Kit: 1 unidade",
     preco: 15900,
     desconto: false,
-    imagem: "../style/img/pri.jpg",
+    imagem: "../style/img/primeiros-socorros.jpg",
     descricao: "Conjunto essencial de pensos, ligaduras, antisséptico e tesoura.",
     categoriaId: 16,
     subcategoria: "Kits e acessórios de primeiros socorros",
@@ -525,7 +536,7 @@ const PRODUTOS = [
     detalhe: "Caixa: (40) x 1",
     preco: 1800,
     desconto: false,
-    imagem: "../style/img/pri.jpg",
+    imagem: "../style/img/pensos-adesivos.jpg",
     descricao: "Pensos de vários tamanhos para pequenos cortes e arranhões.",
     categoriaId: 16,
     subcategoria: "Pensos, ligaduras e adesivos",
@@ -538,7 +549,7 @@ const PRODUTOS = [
     detalhe: "Caixa: (12) x 1",
     preco: 2900,
     desconto: false,
-    imagem: "../style/img/conc.jpg",
+    imagem: "../style/img/preservativos-finos.jpg",
     descricao: "Proteção fiável com maior sensibilidade. Uso único.",
     categoriaId: 10,
     subcategoria: "Métodos contraceptivos",
@@ -551,7 +562,7 @@ const PRODUTOS = [
     detalhe: "Teste: (1 unid.) x 1",
     preco: 3500,
     desconto: false,
-    imagem: "../style/img/conc.jpg",
+    imagem: "../style/img/Teste de gravidez rápido.jpg",
     descricao: "Resultado em minutos, com elevada fiabilidade quando usado conforme as instruções.",
     categoriaId: 10,
     subcategoria: "Testes de fertilidade e gravidez",
@@ -564,7 +575,7 @@ const PRODUTOS = [
     detalhe: "Frasco: (250ml) x 1",
     preco: 4200,
     desconto: false,
-    imagem: "../style/img/bel.jpg",
+    imagem: "../style/img/gel-banho.jpg",
     descricao: "Gel de higiene diária com pH fisiológico, adequado a peles sensíveis.",
     categoriaId: 4,
     subcategoria: "Corpo",
@@ -577,7 +588,7 @@ const PRODUTOS = [
     detalhe: "Frasco: (300ml) x 1",
     preco: 5800,
     desconto: false,
-    imagem: "../style/img/bel.jpg",
+    imagem: "../style/img/shampoo.jpg",
     descricao: "Shampoo para cabelo seco, com fórmula suave e fácil de enxaguar.",
     categoriaId: 4,
     subcategoria: "Cabelo",
@@ -586,6 +597,8 @@ const PRODUTOS = [
   }
 ];
 
+// Objeto com as promoções em destaque.
+// Cada chave (1, 2, 3, 4) é o ID da promoção, referenciado no array "promoIds" dos produtos.
 const PROMOCOES = {
   1: {
     titulo: "Descontos em vitaminas e fórmulas de apoio",
@@ -621,6 +634,8 @@ const PROMOCOES = {
   }
 };
 
+// Formata um valor numérico como moeda: milhares com "." e decimais com ",",
+// seguido do sufixo "AOA" (Kwanza angolano). Ex: 19225.8 → "19.225,80 AOA"
 function formatarPreco(valor) {
   return (
     Number(valor).toLocaleString("pt-PT", {
@@ -630,10 +645,13 @@ function formatarPreco(valor) {
   );
 }
 
+// Procura no array PRODUTOS o produto com o "id" indicado.
+// Number(id) garante que funciona mesmo que "id" venha como string (ex: do URL).
 function obterProduto(id) {
   return PRODUTOS.find((p) => p.id === Number(id));
 }
 
+// Gera o link do WhatsApp com uma mensagem pré-preenchida para comprar o produto.
 function gerarLinkWhatsApp(produto) {
   const urlImagem = new URL(produto.imagem, window.location.href).href;
   const urlProduto = new URL(`produto.html?id=${produto.id}`, window.location.href).href;
@@ -646,6 +664,8 @@ function gerarLinkWhatsApp(produto) {
   return `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(texto)}`;
 }
 
+// Filtra o array PRODUTOS de acordo com critérios opcionais:
+// texto de pesquisa (q), categoria, subcategoria, marca e promoção.
 function filtrarProdutos({ q, categoryId, subcategory, marcaId, promoId } = {}) {
   const termo = (q || "").trim().toLowerCase();
   return PRODUTOS.filter((p) => {
@@ -661,6 +681,7 @@ function filtrarProdutos({ q, categoryId, subcategory, marcaId, promoId } = {}) 
   });
 }
 
+// Gera o HTML de um cartão de produto (usado na grelha de listagem e nos "relacionados").
 function cardProdutoHTML(p, extras = "") {
   return `
     <div class="produto-card">
